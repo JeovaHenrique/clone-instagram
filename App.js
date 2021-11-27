@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Image, Text, View, } from 'react-native';
+import Constants from 'expo-constants';
+import { FontAwesome5 } from '@expo/vector-icons';
+
+import Header from './components/Header';
+import Stories from './components/Stories';
+import Feed from './components/Feed';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
+      <Header />
+      <Stories />
+      <Feed />
     </View>
   );
 }
@@ -14,8 +22,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: Constants.statusBarHeight,
   },
 });
