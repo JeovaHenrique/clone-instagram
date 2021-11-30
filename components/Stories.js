@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
         height: 90,
         width: 90,
         alignItems: 'center',
+        backgroundColor: '#fff',
     },
     imageStory: {
         height: 70,
