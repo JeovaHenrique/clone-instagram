@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar'
 import React, { useState } from 'react'
-import { StyleSheet, Image, Text, View, TextInput, TouchableOpacity, Alert} from 'react-native'
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert} from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function LoginScreen({navigation}) {
@@ -24,7 +24,7 @@ export default function LoginScreen({navigation}) {
         if (response.status === 200) {
             const token = await response.text()
             await AsyncStorage.setItem('token', token)
-            navigation.navigate('HomeScreen')
+            navigation.navigate('LoggedTabNavigator')
         }else {
             Alert.alert(
                 'Erro',
